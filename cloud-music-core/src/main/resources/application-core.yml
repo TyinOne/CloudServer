@@ -1,0 +1,6 @@
+spring:
+  data:
+    redis:
+      password: 888888
+      host: redis.tyin.vip
+      port: 16379
