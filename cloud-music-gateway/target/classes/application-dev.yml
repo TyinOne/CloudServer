@@ -1,0 +1,63 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+eureka:
+  instance:
+    instance-id: cloud-gateway
+    #    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+ribbon:
+  eureka:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    urls:
+      - name: 文件服务
+        url: /file/v3/api-docs?group=default
+    #      - name: 用户服务
+    #        url: /user/v3/api-docs?group=default
+    #        service-name: cloud-user
+    #        order: 2
+
+  api-docs:
+    enabled: true
+    groups:
+      enabled: true
+
+knife4j:
+  # 聚合swagger文档
+  gateway:
+    enable: true
+    routes:
+      - name: 鉴权服务
+        url: /auth/v3/api-docs?group=default
+        service-name: cloud-auth
+        context-path: /auth
+        order: -1
+      - name: 用户服务
+        url: /user/v3/api-docs?group=default
+        service-name: cloud-user
+        context-path: /user
+        order: 1
+      - name: 文件服务
+        url: /file/v3/api-docs?group=default
+        service-name: cloud-file
+        context-path: /file
+        order: 10

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-music-eureka" />
+        <module name="cloud-music-api" />
+        <module name="cloud-music-file" />
+        <module name="cloud-music-core" />
+        <module name="cloud-music-gateway" />
+        <module name="cloud-music-user" />
+        <module name="cloud-music-auth" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-music-api" options="-parameters" />
+      <module name="cloud-music-auth" options="-parameters" />
+      <module name="cloud-music-core" options="-parameters" />
+      <module name="cloud-music-eureka" options="-parameters" />
+      <module name="cloud-music-file" options="-parameters" />
+      <module name="cloud-music-gateway" options="-parameters" />
+      <module name="cloud-music-user" options="-parameters" />
+    </option>
+  </component>
+</project>

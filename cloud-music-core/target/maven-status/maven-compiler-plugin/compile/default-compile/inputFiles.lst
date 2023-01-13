@@ -1,0 +1,9 @@
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\api\Result.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\enums\ResultCode.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\utils\JsonUtils.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\components\CommonComponents.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\utils\StringUtils.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\exception\BaseErrorInfoInterface.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\config\RedisConfig.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\components\RedisComponents.java
+G:\code\cloud-music-server\cloud-music-core\src\main\java\com\tyin\core\exception\ApiException.java

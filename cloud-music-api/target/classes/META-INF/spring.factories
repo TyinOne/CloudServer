@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.tyin.api.userModules.service.factory.UserFeignServiceFactory

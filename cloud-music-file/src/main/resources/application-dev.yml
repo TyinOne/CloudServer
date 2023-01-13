@@ -1,0 +1,24 @@
+server:
+  port: 10280
+spring:
+  application:
+    name: cloud-file
+  datasource:
+    url: jdbc:mysql://rds.tyin.vip:13306/cloud_file?useUnicode=true&characterEncoding=utf-8&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: tyinzero
+eureka:
+  instance:
+    instance-id: cloud-file
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
