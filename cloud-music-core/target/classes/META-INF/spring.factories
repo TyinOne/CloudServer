@@ -1,3 +1,0 @@
-#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-#  com.tyin.core.config.RedisConfig,\
-#  com.tyin.core.components.RedisComponents,

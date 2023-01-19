@@ -6,7 +6,13 @@
     <artifactId>cloud-music-server</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>cloud-music-file</module>
+        <module>cloud-music-gateway</module>
+        <module>cloud-music-eureka</module>
+        <module>cloud-music-core</module>
+        <module>cloud-music-auth</module>
         <module>cloud-music-user</module>
+        <module>cloud-music-api</module>
     </modules>
     <version>0.0.1-SNAPSHOT</version>
     <parent>
