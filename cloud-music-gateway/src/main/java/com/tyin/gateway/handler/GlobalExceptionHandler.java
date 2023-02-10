@@ -8,6 +8,7 @@ import com.tyin.core.logs.RequestLog;
 import com.tyin.core.modules.entity.AdminGatewayLog;
 import com.tyin.core.utils.JsonUtils;
 import lombok.RequiredArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.buffer.DataBufferFactory;
 import org.springframework.http.HttpStatusCode;
@@ -25,8 +26,9 @@ public class GlobalExceptionHandler implements WebExceptionHandler {
     private final RequestLogComponents requestLogComponents;
     private static final RequestLog log = new RequestLog();
 
+    @NotNull
     @Override
-    public Mono<Void> handle(ServerWebExchange exchange, Throwable ex) {
+    public Mono<Void> handle(ServerWebExchange exchange, @NotNull Throwable ex) {
         ServerHttpResponse response = exchange.getResponse();
         if (response.isCommitted()) {
             return Mono.error(ex);

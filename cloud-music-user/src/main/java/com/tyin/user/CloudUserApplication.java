@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description ...
  */
 @SpringBootApplication(scanBasePackages = {"com.tyin.core", "com.tyin.user"})
-@MapperScan("com.tyin.core.repository")
+@MapperScan("com.tyin.user.repository")
 public class CloudUserApplication {
     public static void main(String[] args) {
         SpringApplication.run(CloudUserApplication.class, args);

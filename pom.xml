@@ -34,6 +34,7 @@
         <mybatis.version>3.0.0</mybatis.version>
         <mysql-connector.verion>8.0.31</mysql-connector.verion>
         <druid.version>1.2.9</druid.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
     </properties>
     <repositories>
         <repository>
