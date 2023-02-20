@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import static com.fasterxml.jackson.databind.PropertyNamingStrategies.SNAKE_CASE;
+
 /**
  * @author Tyin
  * @date 2022/3/26 2:42
@@ -37,7 +39,6 @@ public class JsonUtils {
         MAPPER.configure(JsonReadFeature.ALLOW_NON_NUMERIC_NUMBERS.mappedFeature(), true);
         // 允许字符串中存在回车换行控制符
         MAPPER.configure(JsonReadFeature.ALLOW_UNESCAPED_CONTROL_CHARS.mappedFeature(), true);
-        MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
     public static ObjectNode getObjectNode() {
